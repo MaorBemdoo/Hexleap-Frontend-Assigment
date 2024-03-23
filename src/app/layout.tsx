@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Hexleap Frontend Assignment",
@@ -13,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className="h-screen dark:bg-[#292b32] dark:text-white">{children}</body>
+      <body className={`${inter.className} h-screen dark:bg-[#292b32] dark:text-white`}>{children}</body>
     </html>
   );
 }
