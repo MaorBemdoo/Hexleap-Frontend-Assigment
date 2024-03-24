@@ -15,6 +15,16 @@ const config: Config = {
       md: {max: '767px'},
       sm: {max: '639px'},
       mobile: {max: '320px'},
+    },
+    container: {
+      screens: {
+        '2xl': '1536px',
+        xl: '1280px',
+        lg: '1024px',
+        md: '768px',
+        sm: '640px',
+        mobile: '321px',
+      },
     }
   },
   plugins: [require("daisyui")],
