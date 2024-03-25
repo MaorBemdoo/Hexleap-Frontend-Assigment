@@ -1,3 +1,5 @@
+import { events } from "@/data"
+import Event from "./Event"
 import Image from "next/image"
 
 const CollectionSpotlight = () => {
@@ -7,7 +9,13 @@ const CollectionSpotlight = () => {
             <p className="text-sm mt-2 mb-4">Discover extraordinary moments with our Spotlight Collection metatickets—exclusive access to premium events for an unforgettable experience. Grab yours today!</p>
             <div className="flex items-center justify-between w-full">
                 <Image src="/chervon_left.png" alt="chervon left" className="p-2 border border-[#2C9CF0] cursor-pointer h-8 w-6 text-start" width={0} height={0} priority />
-                <div className="basis-8/12"></div>
+                <div className="basis-8/12 columns-3 gap-8">
+                    {
+                        events.map(({ image, title, location, time, btnText, id }) => {
+                            return <Event image={image} title={title} location={location} time={time} btnText={btnText} key={id}/>
+                        })
+                    }
+                </div>
                 <Image src="/chervon_right.png" alt="chervon right" className="p-2 border border-[#2C9CF0] cursor-pointer h-8 w-6 text-end" width={0} height={0} priority />
             </div>
         </div>

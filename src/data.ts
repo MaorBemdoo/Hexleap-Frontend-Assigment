@@ -28,3 +28,30 @@ export const sports = [
         id: 4
     }
 ]
+
+export const events = [
+    {
+        image: "/ticket_mockup.png",
+        title: "Las Vegas Aviators",
+        location: "Las Vegas Ballpark, Las Vegas, Nevada",
+        time: "OCT 15 | SUN | 4:30 PM",
+        btnText: "Take Flight Collection",
+        id: 1
+    },
+    {
+        image: "/ticket_mockup2.png",
+        title: "Sacramento River Cats",
+        location: "Sutter Health Park, Sacramento, California",
+        time: "OCT 15 | SUN | 4:30 PM",
+        btnText: "Orange Collection",
+        id: 2
+    },
+    {
+        image: "/ticket_mockup.png",
+        title: "Las Vegas Aviators",
+        location: "Las Vegas Ballpark, Las Vegas, Nevada",
+        time: "OCT 15 | SUN | 4:30 PM",
+        btnText: "Take Flight Collection",
+        id: 3
+    }
+]

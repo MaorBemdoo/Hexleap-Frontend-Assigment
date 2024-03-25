@@ -1,6 +1,6 @@
 interface ButtonProps{
     children?: React.ReactNode;
-    className: string;
+    className?: string;
 }
 
 interface SportProps{
@@ -8,4 +8,12 @@ interface SportProps{
     location: string;
     totalEvents: number;
     sport: string;
+}
+
+interface EventProps{
+    image: string;
+    title: string;
+    location: string;
+    time: string;
+    btnText: string;
 }
