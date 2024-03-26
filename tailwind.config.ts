@@ -14,7 +14,7 @@ const config: Config = {
       lg: {max: '1023px'},
       md: {max: '767px'},
       sm: {max: '639px'},
-      mobile: {max: '320px'},
+      mobile: {max: '413px'},
     },
     container: {
       screens: {
@@ -23,7 +23,6 @@ const config: Config = {
         lg: '1024px',
         md: '768px',
         sm: '640px',
-        mobile: '321px',
       },
     }
   },
