@@ -1,19 +1,29 @@
 "use client"
 
-import { useEffect, ReactElement, useState } from "react"
+import { useEffect, useState, useRef } from "react";
 
-const ThemeController = ({ children }: { children?: ReactElement }) => {
-
-    const darkStorage = localStorage.getItem("dark")
-    const dark = darkStorage ? JSON.parse(darkStorage) : localStorage.setItem("dark", "true")
-
+const ThemeController = ({ children }: { children?: React.ReactElement }) => {
+    const [dark, setDark] = useState(false);
+    const hasWindowRef = useRef(false);
 
     useEffect(() => {
-        document.getElementsByTagName("html")[0].classList.toggle("dark", dark)
-    }, [dark])
+        if (typeof window !== 'undefined') {
+            hasWindowRef.current = true;
+
+            const darkStorage = localStorage.getItem("dark");
+            setDark(darkStorage ? JSON.parse(darkStorage) : true);
+        }
+    }, []);
+
+    useEffect(() => {
+        if (hasWindowRef.current) {
+            document.getElementsByTagName("html")[0].classList.toggle("dark", dark);
+        }
+    }, [dark]);
 
     return (
         <>{children}</>
-    )
-}
-export default ThemeController
+    );
+};
+
+export default ThemeController;
