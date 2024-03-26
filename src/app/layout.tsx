@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ThemeController from "@/components/ThemeController";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.className} dark:bg-[#292b32] dark:text-white`}>{children}</body>
-    </html>
+    <ThemeController>
+      <html lang="en" className="overflow-x-hidden">
+        <body className={`${inter.className} relative overflow-x-hidden w-screen dark:bg-[#292b32] dark:text-white`}>{children}</body>
+      </html>
+    </ThemeController>
   );
 }
