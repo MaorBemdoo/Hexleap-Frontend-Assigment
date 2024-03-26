@@ -5,7 +5,7 @@ import Image from "next/image"
 const CollectionSpotlight = () => {
 
     return (
-        <div className="mt-6 w-full text-center p-10 bg-gradient-to-b from-[#F9F8FF] to-[#F3F9FF] dark:from-[#18282A] dark:to-[#221A2C]">
+        <div className="mt-6 w-fit mx-auto text-center p-10 bg-gradient-to-b from-[#F9F8FF] to-[#F3F9FF] dark:from-[#18282A] dark:to-[#221A2C]">
             <h2 className="text-5xl font-['Poppins',_sans-serif] font-bold">Collection Spotlight</h2>
             <p className="text-sm mt-2 mb-4">Discover extraordinary moments with our Spotlight Collection metatickets—exclusive access to premium events for an unforgettable experience. Grab yours today!</p>
             <div className="flex items-center justify-between w-full">

@@ -11,7 +11,7 @@ const ThemeController = ({ children }: { children?: React.ReactElement }) => {
             hasWindowRef.current = true;
 
             const darkStorage = localStorage.getItem("dark");
-            setDark(darkStorage ? JSON.parse(darkStorage) : true);
+            setDark(darkStorage ? JSON.parse(darkStorage) : false);
         }
     }, []);
 

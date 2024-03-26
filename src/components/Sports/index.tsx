@@ -5,7 +5,7 @@ import Advertisement from "./Advertisement";
 
 export default function Sports() {
     return (
-        <div className="w-full space-y-8">
+        <div className="w-fit mx-auto space-y-8">
             <h4 className="font-bold text-2xl border-b-2 border-[#738FFF] w-fit">Sports</h4>
             <div className="flex flex-wrap gap-2 sm:items-center sm:justify-center">
                 {
